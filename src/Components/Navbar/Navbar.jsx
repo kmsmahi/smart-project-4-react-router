@@ -1,9 +1,14 @@
 import { NavLink } from "react-router";
-
 const Navbar = () => {
+    const activeLink = ({ isActive }) => 
+        `px-4 py-2 rounded-lg transition-all duration-300 font-semibold ${
+            isActive 
+            ? "bg-violet-100 text-violet-800 shadow-sm" 
+            : "text-violet-600 hover:bg-violet-50 hover:text-violet-700"
+        }`;
+
     return (
-        /* We keep your exact px-16 and mt-4 layout */
-        <div className="navbar  borde rounded-2xl px-16 mt-4 sticky top-4 z-50">
+        <div className="navbar px-16 py-4 mt-4 sticky top-4 z-50 rounded-2xl border border-white/40 bg-white/30 backdrop-blur-md  transition-all">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-violet-700">
@@ -13,52 +18,39 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={-1}
-                        className="menu menu-sm dropdown-content bg-white/90 backdrop-blur-lg rounded-box z-1 mt-3 w-52 p-2 shadow-2xl border border-violet-100"
+                        className="menu menu-sm dropdown-content bg-white/95 backdrop-blur-xl rounded-xl z-1 mt-3 w-52 p-2 shadow-2xl border border-violet-100"
                     >
-                        <li><NavLink to="/" className="text-violet-600 font-medium hover:text-violet-700">
-                        Home</NavLink></li>
-                        <li><NavLink to="/apps" className="text-violet-600 font-medium hover:text-violet-700">
-                        Apps</NavLink></li>
-                        <li><NavLink to="/installation" className="text-violet-600 font-medium hover:text-violet-700">In
-                        stallation</NavLink></li>
+                        <li><NavLink to="/">Home</NavLink></li>
+                        <li><NavLink to="/apps">Apps</NavLink></li>
+                        <li><NavLink to="/installation">Installation</NavLink></li>
                     </ul>
                 </div>
                 
-                {/* Logo Section */}
-                <div className="flex items-center justify-center gap-0">
-                    <img className="w-10 drop-shadow-md" src="/assets/logo.png" alt="Logo" />
-                    <NavLink to='/' className="btn btn-ghost text-2xl font-bold tracking-tight text-violet-900">Kms.io</NavLink>
+                {/* Brand Logo Section */}
+                <div className="flex items-center gap-1">
+                    <img className="w-10 drop-shadow-sm" src="/assets/logo.png" alt="Logo" />
+                    <NavLink to='/' className="btn btn-ghost text-2xl font-extrabold tracking-tighter text-violet-900 normal-case hover:bg-transparent">
+                        Kms.io
+                    </NavLink>
                 </div>
             </div>
 
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 gap-4">
-                    <li>
-                        <NavLink to="/" className="text-violet-600 font-medium hover:text-violet-700">
-                        Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/apps" className="text-violet-600 font-medium hover:text-violet-700">
-                            Apps
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/installation" className="text-violet-600 font-medium hover:text-violet-700">
-                            Installation
-                        </NavLink>
-                    </li>
+                <ul className="menu menu-horizontal px-1 gap-2">
+                    <li><NavLink to="/" className={activeLink}>Home</NavLink></li>
+                    <li><NavLink to="/apps" className={activeLink}>Apps</NavLink></li>
+                    <li><NavLink to="/installation" className={activeLink}>Installation</NavLink></li>
                 </ul>
             </div>
 
             <div className="navbar-end flex gap-4 items-center">
                 <a
-                href="https://github.com/kmsmahi/smart-project-4-react-router"
-                target="_blank"
-                rel="noreferrer"
-                className="btn bg-violet-700 hover:bg-violet-500 border-none text-white text-lg shadow-md rounded-xl px-8 py-2 flex items-center gap-0 transition-all">
-                    <span>
-                        <img className="w-12 mr-2 brightness-0 invert" src="/assets/GitHub-Logo.wine.png" alt="" />
-                    </span>
+                    href="https://github.com/kmsmahi/smart-project-4-react-router"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn bg-violet-700 hover:bg-violet-800 border-none text-white text-lg font-medium shadow-md hover:shadow-violet-200 rounded-2xl px-8 py-6 flex items-center transition-all normal-case"
+                >
+                    <img className="w-12 mr-1 brightness-0 invert" src="/assets/GitHub-Logo.wine.png" alt="" />
                     Contribute
                 </a>
             </div>
