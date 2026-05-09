@@ -3,10 +3,12 @@ import Home from "../Pages/Home";
 import Apps from "../Pages/Apps";
 import Installation from "../Pages/Installation";
 import RootsLayOut from "../RootsLayOut/RootsLayOut";
+import ErrorPages from "../Pages/ErrorPages";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootsLayOut></RootsLayOut>,
+    errorElement:<ErrorPages></ErrorPages>,
     children:[
         {
             index:true,

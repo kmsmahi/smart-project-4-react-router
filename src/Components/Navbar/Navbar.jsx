@@ -29,9 +29,10 @@ const Navbar = () => {
           <li><a>Installation</a></li>
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">Contribute</a>
+  <div className="navbar-end flex gap-4 items-center">
+    <a className="btn btn-primary"><span><img className="w-12" src="/public/assets/GitHub-Logo.wine.png" alt="" /></span>Contribute</a>
   </div>
+  
 </div>
     );
 };
