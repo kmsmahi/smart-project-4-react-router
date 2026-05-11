@@ -172,7 +172,7 @@
   },
   {
     "id": 10,
-    "image": "./assets/demo-app (1).webp",
+    "image": "../assets/demo-app (1).webp",
     "title": "WealthWise",
     "companyName": "Fintech Solutions",
     "description": "Invest in stocks and crypto with zero commission and smart alerts.",
@@ -191,7 +191,7 @@
   },
   {
     "id": 11,
-    "image": "./assets/demo-app (2).webp",
+    "image": "../assets/demo-app (2).webp",
     "title": "LingoMaster",
     "companyName": "Polyglot Inc.",
     "description": "Learn 40+ languages through gamified lessons and real-world practice.",
@@ -210,7 +210,7 @@
   },
   {
     "id": 12,
-    "image": "./assets/demo-app (3).webp",
+    "image": "../assets/demo-app (3).webp",
     "title": "GuildRoom",
     "companyName": "Gamers Guild",
     "description": "The best way to hang out with your gaming community via voice and text.",
@@ -229,7 +229,7 @@
   },
   {
     "id": 13,
-    "image": "./assets/demo-app (4).webp",
+    "image": "../assets/demo-app (4).webp",
     "title": "SwiftRide",
     "companyName": "Swift Mobility",
     "description": "Get a reliable ride in minutes with transparent pricing.",
@@ -286,7 +286,7 @@
   },
   {
     "id": 16,
-    "image": "./assets/demo-app (5).webp",
+    "image": "../assets/demo-app (5).webp",
     "title": "Aura",
     "companyName": "Mindfulness Labs",
     "description": "Guided meditation and sleep stories to reduce stress and anxiety.",
@@ -362,7 +362,7 @@
   },
   {
     "id": 20,
-    "image": "./assets/demo-app (6).webp",
+    "image": "../assets/demo-app (6).webp",
     "title": "RoadRunner",
     "companyName": "Athlete Circle",
     "description": "The best social network for runners and cyclists.",
