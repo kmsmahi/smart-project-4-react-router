@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useApps from '../CustomHooks/useApps';
 import AppsCard from '../Components/AppsCard/AppsCard';
+import { NavLink } from 'react-router';
+
 
 const Apps = () => {
     const { apps, loading, error } = useApps();
+    const [search,setSearch]=useState('');
     if (loading) {
         return <div className="min-h-screen flex items-center justify-center font-bold text-violet-600 bg-slate-50">Loading productive tools...</div>;
     }
@@ -11,6 +14,9 @@ const Apps = () => {
     if (error) {
         return <div className="text-red-500 text-center mt-20">Error: {error}</div>;
     }
+    console.log(search);
+    const term=search.trim().toLowerCase();
+    const filteredApps=term? apps.filter(app=>app.title.toLowerCase().includes(term) || app.companyName.toLowerCase().includes(term)) :apps;
     return (
         <div className='bg-base-200 pb-24'>
                 <div className="max-w-7xl mx-auto px-4">
@@ -48,6 +54,8 @@ const Apps = () => {
         <input 
             type="text" 
             placeholder="Search applications..." 
+            value={search}
+            onChange={(e)=>setSearch(e.target.value)}
             className="w-full pl-11 pr-4 py-3 bg-slate-100 border-none focus:ring-2 focus:ring-violet-500/20 focus:bg-white rounded-xl text-slate-700 placeholder:text-slate-400 placeholder:font-medium transition-all outline-none"
         />
         {/* Pro Touch: KBD Shortcut hint (Visible on Desktop) */}
@@ -57,14 +65,46 @@ const Apps = () => {
     </div>
 </div>
                     {/* Smart Responsive Grid */}
-                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center mt-12'>
+                    {/* <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center mt-12'>
                         {
-                            apps?.map(app => <AppsCard key={app.id} data={app} />)
+                            filteredApps?.map(app => <AppsCard key={app.id} data={app} />)
                         }
-                    </div>
+                    </div> */}
+
+                    {/* Inside your main return, below the search bar div */}
+<div className="mt-12">
+    {term !== '' && filteredApps.length === 0 ? (
+        /* Smart Empty State Container */
+        <div className="flex flex-col items-center justify-center py-20 bg-white/30 backdrop-blur-md rounded-3xl border-2 border-dashed border-slate-200">
+            <div className="bg-violet-100 p-4 rounded-full mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.172 9.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </div>
+            <h3 className="text-2xl font-bold text-slate-800">No results found</h3>
+            <p className="text-slate-500 mt-2 text-center max-w-xs">
+                We couldn't find any apps matching <span className="text-violet-600 font-bold italic">"{search}"</span>.
+            </p>
+            
+            {/* Smart NavLink styled as a clean button */}
+            <button 
+                onClick={() => setSearch('')} 
+                className="mt-8 px-8 py-3 bg-violet-600 hover:bg-violet-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-violet-100 active:scale-95"
+            >
+                Clear Search & View All
+            </button>
+        </div>
+    ) : (
+        /* Regular Grid */
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center'>
+            {filteredApps?.map(app => <AppsCard key={app.id} data={app} />)}
+        </div>
+    )}
+</div>
                 </div>
             </div>
     );
+
 };
 
 export default Apps;
