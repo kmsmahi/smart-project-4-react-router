@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const AppsCard = ({ data }) => {
     const { image, title, companyName, ratingAvg, downloads, description } = data || {};
 
     return (
         /* Removed fixed w-96 so it flows with the grid, added transition effects */
-        <div className="card bg-white w-full max-w-[320px] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group">
+        <Link to={`/appsDetails/${data.id}`} className="card bg-white w-full max-w-[320px] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group">
             
             {/* Image Section - Using Aspect Ratio for consistency */}
             <figure className="px-6 pt-6">
@@ -41,7 +42,7 @@ const AppsCard = ({ data }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
         // <button className="btn btn-active btn-primary">Primary</button>
         
     );
