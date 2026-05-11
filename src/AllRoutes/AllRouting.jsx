@@ -15,13 +15,14 @@ const router = createBrowserRouter([
             element:<Home></Home>
         },
         {
-            path:'apps',
+            path:'/apps',
             element:<Apps></Apps>
         },
         {
-            path:'installation',
+            path:'/installation',
             element:<Installation></Installation>
         },
+        
     ]
   },
   

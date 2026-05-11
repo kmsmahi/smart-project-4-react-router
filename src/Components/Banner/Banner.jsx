@@ -16,15 +16,38 @@ const Banner = () => {
                     
                     {/* Store Buttons */}
                     <div className='flex flex-wrap gap-4 justify-center'>
-                        <button className="btn btn-outline border-slate-300 hover:bg-slate-100 text-slate-700 px-6 h-14 rounded-2xl transition-all">
-                            <img width="24" height="24" src="https://img.icons8.com/fluency/48/google-play-store-new.png" alt="GP" />
-                            <span className="ml-2 font-semibold">Google Play</span>
-                        </button>
-                        <button className="btn btn-outline border-slate-300 hover:bg-slate-100 text-slate-700 px-6 h-14 rounded-2xl transition-all">
-                            <img width="24" height="24" src="https://img.icons8.com/color/48/apple-app-store--v3.png" alt="AS" />
-                            <span className="ml-2 font-semibold">App Store</span>
-                        </button>
-                    </div>
+    {/* Google Play Button */}
+    <a 
+        href="https://play.google.com/store/apps?hl=en" 
+        target="_blank" 
+        rel="noreferrer"
+        className="btn btn-outline border-slate-300 hover:bg-slate-100 text-slate-700 px-6 h-14 rounded-2xl transition-all flex items-center no-underline"
+    >
+        <img 
+            width="24" 
+            height="24" 
+            src="https://img.icons8.com/fluency/48/google-play-store-new.png" 
+            alt="GP" 
+        />
+        <span className="ml-2 font-semibold">Google Play</span>
+    </a>
+
+    {/* App Store Button */}
+    <a 
+        href="https://www.apple.com/app-store/" 
+        target="_blank" 
+        rel="noreferrer"
+        className="btn btn-outline border-slate-300 hover:bg-slate-100 text-slate-700 px-6 h-14 rounded-2xl transition-all flex items-center no-underline"
+    >
+        <img 
+            width="24" 
+            height="24" 
+            src="https://img.icons8.com/color/48/apple-app-store--v3.png" 
+            alt="AS" 
+        />
+        <span className="ml-2 font-semibold">App Store</span>
+    </a>
+</div>
 
                     {/* Main Hero Image with Floating Effect */}
                     <div className='mt-16 flex justify-center p-8 bg-white/50 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/30 hover:shadow-violet-300 transition-shadow'>
