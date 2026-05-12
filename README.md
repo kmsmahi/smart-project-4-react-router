@@ -1,6 +1,6 @@
 # Kms.io | Professional App Management Dashboard
 
-[![Live Site](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)]kms-io-apps.surge.sh
+[![Live Site](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://kms-io-apps.surge.sh)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
@@ -9,7 +9,7 @@ An intuitive, high-performance web application designed to help users explore, m
 ---
 
 ## 🚀 Live Link
-**View the project live here:** [INSERT_YOUR_LIVE_LINK_HERE](INSERT_YOUR_LIVE_LINK_HERE)
+**View the project live here:** [https://kms-io-apps.surge.sh](https://kms-io-apps.surge.sh)
 
 ---
 
@@ -34,18 +34,8 @@ An intuitive, high-performance web application designed to help users explore, m
 
 ---
 
-
-
 ## ⚙️ Installation & Setup
 
 1.  **Clone the repository:**
     ```bash
     git clone [https://github.com/kmsmahi/smart-project-4-react-router.git](https://github.com/kmsmahi/smart-project-4-react-router.git)
-    ```
-2.  **Navigate to the directory:**
-    ```bash
-    cd smart-project-4-react-router
-    ```
-3.  **Install dependencies:**
-    ```bash
-    npm install
