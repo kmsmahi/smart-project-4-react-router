@@ -7,7 +7,12 @@ import { useState } from 'react';
 const AppsDetails = () => {
     const { id } = useParams();
     const { apps, loading } = useApps();
-    const [isInstalled,setInstalled]=useState(false);
+    // const [isInstalled,setInstalled]=useState(false);
+    const [isInstalled, setInstalled] = useState(() => {
+    const existList = JSON.parse(localStorage.getItem('install')) || [];
+    // Check if this specific app ID is already in the storage
+    return existList.some(app => String(app.id) === id);
+});
     // Safety check for loading state
     if (loading) return <div className="min-h-screen flex items-center justify-center font-bold text-violet-600">Loading details...</div>;
 
@@ -25,6 +30,18 @@ const AppsDetails = () => {
         });
 
     };
+    const localStorageInstallBtn = () => {
+    const existList = JSON.parse(localStorage.getItem('install')) || [];
+    
+    
+    const isExisted = existList.find(app => String(app.id) === id);
+    
+    if (!isExisted) {
+        // Save the 'singleapp' object, NOT the 'apps' array
+        const updateList = [...existList, singleapp];
+        localStorage.setItem('install', JSON.stringify(updateList));
+    }
+};
 
     return (
         <div className="min-h-screen bg-slate-50 pb-20">
@@ -70,7 +87,10 @@ const AppsDetails = () => {
                     ? 'bg-slate-300 text-slate-500 cursor-not-allowed' 
                     : 'bg-green-500 hover:bg-green-700 text-white active:scale-95'
                 }`} 
-            onClick={installBtnHandler}
+                onClick={() => {
+                    installBtnHandler();
+                    localStorageInstallBtn();
+    }}
         >
             {/* 5. Dynamically change text */}
             {isInstalled ? "Installed" : "Install Now"}

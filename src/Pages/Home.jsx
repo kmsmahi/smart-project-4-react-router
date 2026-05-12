@@ -7,9 +7,31 @@ import { NavLink } from 'react-router';
 const Home = () => {
     const { apps, loading, error } = useApps();
     const sliceApps=apps.slice(0,8);
-    if (loading) {
-        return <div className="min-h-screen flex items-center justify-center font-bold text-violet-600 bg-slate-50">Loading productive tools...</div>;
-    }
+   if (loading) {
+    return (
+        <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 px-6">
+            <div className="flex flex-col md:flex-row items-center gap-4 animate-pulse">
+                <div className="w-12 md:w-16">
+                    <img 
+                        className="w-full h-auto object-contain" 
+                        src="../assets/logo.png" 
+                        alt="Logo" 
+                    />
+                </div>
+
+                
+                <h2 className="text-xl md:text-2xl font-black text-violet-600 tracking-tight text-center">
+                    Loading productive tools...
+                </h2>
+            </div>
+            
+            
+            <div className="w-48 h-1 bg-slate-200 rounded-full mt-6 overflow-hidden">
+                <div className="w-1/2 h-full bg-violet-600 rounded-full animate-infinite-scroll"></div>
+            </div>
+        </div>
+    );
+}
     
     if (error) {
         return <div className="text-red-500 text-center mt-20">Error: {error}</div>;
