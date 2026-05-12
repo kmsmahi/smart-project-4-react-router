@@ -1,14 +1,11 @@
 import React from 'react';
 
 const InstallApps = ({ app, onUninstall }) => {
-    // Destructure id so we can use it to identify which app to remove
     const { image, title, ratingAvg, size, id } = app || {};
 
     return (
         <div className="bg-white border border-slate-200 rounded-2xl p-4 transition-all hover:border-violet-300 hover:shadow-md">
             <div className="flex flex-row items-center justify-between gap-4">
-                
-                {/* 1. Identity & Info (Main Group) */}
                 <div className="flex items-center gap-4 min-w-0"> 
                     <div className="relative flex-shrink-0">
                         <div className="w-16 h-16 rounded-xl bg-slate-50 p-3 border border-slate-100 flex items-center justify-center">
@@ -33,10 +30,10 @@ const InstallApps = ({ app, onUninstall }) => {
                     </div>
                 </div>
 
-                {/* 2. Action Buttons (Far Right) */}
+                
                 <div className="flex items-center gap-2 flex-shrink-0">
                     <button 
-                        onClick={() => onUninstall(id)} // Hooked up to the parent function
+                        onClick={() => onUninstall(id)} 
                         className="px-5 py-2 bg-black hover:bg-red-600 text-white rounded-lg font-bold text-xs transition-all active:scale-95"
                     >
                         Uninstall

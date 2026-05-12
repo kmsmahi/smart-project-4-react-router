@@ -77,7 +77,7 @@ const Apps = () => {
             onChange={(e)=>setSearch(e.target.value)}
             className="w-full pl-11 pr-4 py-3 bg-slate-100 border-none focus:ring-2 focus:ring-violet-500/20 focus:bg-white rounded-xl text-slate-700 placeholder:text-slate-400 placeholder:font-medium transition-all outline-none"
         />
-        {/* Pro Touch: KBD Shortcut hint (Visible on Desktop) */}
+       
         <div className="absolute inset-y-0 right-0 hidden sm:flex items-center pr-3">
             <kbd className="kbd kbd-sm bg-white border-slate-200 text-slate-400">⌘K</kbd>
         </div>

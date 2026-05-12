@@ -6,7 +6,6 @@ const Navbar = () => {
             ? "bg-violet-100 text-violet-800 shadow-sm" 
             : "text-violet-600 hover:bg-violet-50 hover:text-violet-700"
         }`;
-
     return (
         <div className="navbar px-4 lg:px-16 py-4 mt-4 z-50 rounded-2xl border border-white/40 bg-white/30 backdrop-blur-md  transition-all">
             <div className="navbar-start">
@@ -26,7 +25,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 
-                {/* Brand Logo Section */}
+                
                 <div className="flex items-center gap-1">
                     <img className="w-10 drop-shadow-sm" src="/assets/logo.png" alt="Logo" />
                     <NavLink to='/' className="btn btn-ghost text-2xl font-extrabold tracking-tighter text-violet-900 normal-case hover:bg-transparent">

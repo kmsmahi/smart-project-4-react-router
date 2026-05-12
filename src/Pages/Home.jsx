@@ -41,7 +41,7 @@ const Home = () => {
         <div className="bg-slate-50 min-h-screen">
             <Banner />
             
-            {/* Main Content Section */}
+            
             <div className='bg-base-200 pb-24'>
                 <div className="max-w-7xl mx-auto px-4">
                     <h1 className='text-4xl md:text-6xl font-black text-center pt-24 tracking-tight text-slate-800'>
@@ -51,7 +51,7 @@ const Home = () => {
                         Discover the most popular apps in the market, curated for peak performance.
                     </p>
 
-                    {/* Smart Responsive Grid */}
+                    
                     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center'>
                         {
                             sliceApps?.map(app => <AppsCard key={app.id} data={app} />)
@@ -70,12 +70,12 @@ const Home = () => {
     overflow-hidden
   "
 >
-  {/* Subtle Background Glow Effect on Hover */}
+  
   <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></span>
   
   <span className="relative flex items-center gap-2">
     Show All 
-    {/* Arrow icon that moves slightly on hover */}
+    
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
       className="h-5 w-5 transform group-hover:translate-x-1 transition-transform" 

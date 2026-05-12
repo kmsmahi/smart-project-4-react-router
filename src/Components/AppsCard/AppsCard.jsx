@@ -5,10 +5,7 @@ const AppsCard = ({ data }) => {
     const { image, title, companyName, ratingAvg, downloads, description } = data || {};
 
     return (
-        /* Removed fixed w-96 so it flows with the grid, added transition effects */
         <Link to={`/appsDetails/${data.id}`} className="card bg-white w-full max-w-[320px] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group">
-            
-            {/* Image Section - Using Aspect Ratio for consistency */}
             <figure className="px-6 pt-6">
                 <div className="w-full aspect-square rounded-2xl bg-slate-50 flex items-center justify-center p-4 overflow-hidden border border-slate-50">
                     <img
@@ -26,8 +23,6 @@ const AppsCard = ({ data }) => {
                     </h2>
                     <div className="badge badge-secondary font-bold text-xs">★ {ratingAvg}</div>
                 </div>
-                
-                {/* Description with clamped lines for uniform card height */}
                 <p className="text-sm text-slate-500 line-clamp-2 my-2 min-h-[40px]">
                     {description}
                 </p>
@@ -43,7 +38,7 @@ const AppsCard = ({ data }) => {
                 </div>
             </div>
         </Link>
-        // <button className="btn btn-active btn-primary">Primary</button>
+       
         
     );
     
