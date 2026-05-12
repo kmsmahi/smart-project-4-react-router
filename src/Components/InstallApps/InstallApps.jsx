@@ -1,7 +1,8 @@
 import React from 'react';
 
 const InstallApps = ({ app, onUninstall }) => {
-    const { image, title, ratingAvg, downloads, size } = app || {};
+    // Destructure id so we can use it to identify which app to remove
+    const { image, title, ratingAvg, size, id } = app || {};
 
     return (
         <div className="bg-white border border-slate-200 rounded-2xl p-4 transition-all hover:border-violet-300 hover:shadow-md">
@@ -9,7 +10,6 @@ const InstallApps = ({ app, onUninstall }) => {
                 
                 {/* 1. Identity & Info (Main Group) */}
                 <div className="flex items-center gap-4 min-w-0"> 
-                    {/* min-w-0 prevents text overflow from breaking the flexbox */}
                     <div className="relative flex-shrink-0">
                         <div className="w-16 h-16 rounded-xl bg-slate-50 p-3 border border-slate-100 flex items-center justify-center">
                             <img src={image} alt={title} className="w-full h-full object-contain" />
@@ -21,7 +21,6 @@ const InstallApps = ({ app, onUninstall }) => {
                         <h3 className="text-lg font-bold text-slate-900 truncate uppercase tracking-tight">
                             {title}
                         </h3>
-                        {/* Stats inline for a smarter, more compact professional look */}
                         <div className="flex items-center gap-3 mt-1">
                             <span className="text-xs font-bold text-slate-500 flex items-center gap-1">
                                 <span className="text-amber-500">★</span> {ratingAvg}
@@ -36,11 +35,12 @@ const InstallApps = ({ app, onUninstall }) => {
 
                 {/* 2. Action Buttons (Far Right) */}
                 <div className="flex items-center gap-2 flex-shrink-0">
-                    <button className="px-5 py-2 bg-black hover:bg-violet-600 text-white rounded-lg font-bold text-xs transition-all active:scale-95">
+                    <button 
+                        onClick={() => onUninstall(id)} // Hooked up to the parent function
+                        className="px-5 py-2 bg-black hover:bg-red-600 text-white rounded-lg font-bold text-xs transition-all active:scale-95"
+                    >
                         Uninstall
                     </button>
-                    
-                    
                 </div>
 
             </div>

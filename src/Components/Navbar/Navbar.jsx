@@ -8,7 +8,7 @@ const Navbar = () => {
         }`;
 
     return (
-        <div className="navbar px-16 py-4 mt-4 z-50 rounded-2xl border border-white/40 bg-white/30 backdrop-blur-md  transition-all">
+        <div className="navbar px-4 lg:px-16 py-4 mt-4 z-50 rounded-2xl border border-white/40 bg-white/30 backdrop-blur-md  transition-all">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-violet-700">
@@ -48,7 +48,7 @@ const Navbar = () => {
                     href="https://github.com/kmsmahi/smart-project-4-react-router"
                     target="_blank"
                     rel="noreferrer"
-                    className="btn bg-violet-700 hover:bg-violet-800 border-none text-white text-lg font-medium shadow-md hover:shadow-violet-200 rounded-2xl px-8 py-6 flex items-center transition-all normal-case"
+                    className="btn bg-violet-700 hover:bg-violet-800 border-none text-white  text-sm lg:text-lg font-medium shadow-md hover:shadow-violet-200 rounded-xl  lg:rounded-2xl  px-4 lg:px-8 py-2 lg:py-6  flex items-center transition-all normal-case"
                 >
                     <img className="w-12 mr-1 brightness-0 invert" src="/assets/GitHub-Logo.wine.png" alt="" />
                     Contribute
