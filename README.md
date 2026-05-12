@@ -1,16 +1,51 @@
-# React + Vite
+# Kms.io | Professional App Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Live Site](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](INSERT_YOUR_LIVE_LINK_HERE)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-Currently, two official plugins are available:
+An intuitive, high-performance web application designed to help users explore, manage, and organize their digital tools. Built with a focus on clean UI/UX and seamless state management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Live Link
+**View the project live here:** [INSERT_YOUR_LIVE_LINK_HERE](INSERT_YOUR_LIVE_LINK_HERE)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   **App Library Explorer:** Browse through a curated list of high-quality applications.
+-   **Local Installation Simulation:** "Install" apps to your personal library using browser LocalStorage.
+-   **Smart Sorting:** Organize your installed apps by file size (Low-to-High or High-to-Low).
+-   **Professional Dashboard:** Responsive design featuring a glassmorphism navbar and smooth micro-interactions.
+-   **Uninstall Management:** Easily remove applications from your library with instant UI updates.
+-   **Persistent Data:** Your library state is saved across browser sessions.
+
+---
+
+## 🛠️ Tech Stack
+
+-   **Frontend:** React.js (Vite)
+-   **Routing:** React Router v7
+-   **Styling:** Tailwind CSS + DaisyUI
+-   **Icons & Assets:** Lucide React / SVG Icons
+-   **State & Storage:** React Hooks (useState, useEffect) & LocalStorage API
+
+---
+
+
+
+## ⚙️ Installation & Setup
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/kmsmahi/smart-project-4-react-router.git](https://github.com/kmsmahi/smart-project-4-react-router.git)
+    ```
+2.  **Navigate to the directory:**
+    ```bash
+    cd smart-project-4-react-router
+    ```
+3.  **Install dependencies:**
+    ```bash
+    npm install
